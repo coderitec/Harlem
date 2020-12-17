@@ -1,0 +1,95 @@
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+PS C:\Users\Franc\Desktop\hollywood> ls
+    Directory: C:\Users\Franc\Desktop\hollywood
+
+
+Mode                LastWriteTime         Length Name                                                                       
+----                -------------         ------ ----                                                                       
+-a----       12/17/2020  11:39 AM              0 burbank.py                                                                 
+-a----       12/17/2020  11:39 AM              0 westpoint.py
+
+
+PS C:\Users\Franc\Desktop\hollywood> git init
+PS C:\Users\Franc\Desktop\hollywood> git branch
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        burbank.py
+        westpoint.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\Franc\Desktop\hollywood> git checkout -b downtown
+Switched to a new branch 'downtown'
+PS C:\Users\Franc\Desktop\hollywood> git add .\burbank.py
+PS C:\Users\Franc\Desktop\hollywood> git status
+On branch downtown
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+Untracked files:
+        westpoint.py
+[downtown (root-commit) 777aa21] added a file to the repository
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 burbank.py
+PS C:\Users\Franc\Desktop\hollywood> git checkout -b midtown
+Switched to a new branch 'midtown'
+PS C:\Users\Franc\Desktop\hollywood> git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   westpoint.py
+
+PS C:\Users\Franc\Desktop\hollywood> git commit -m "added a file to the respository"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 westpoint.py
+PS C:\Users\Franc\Desktop\hollywood> git status
+On branch midtown
+nothing to commit, working tree clean
+PS C:\Users\Franc\Desktop\hollywood> git branch
+  downtown
+* midtown
+PS C:\Users\Franc\Desktop\hollywood> git checkout -
+Switched to branch 'downtown'
+PS C:\Users\Franc\Desktop\hollywood> git remote add origin https://github.com/francenemuo/Harlem.git
+PS C:\Users\Franc\Desktop\hollywood> git push
+fatal: The current branch downtown has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin downtown
+
+PS C:\Users\Franc\Desktop\hollywood>
+PS C:\Users\Franc\Desktop\hollywood> git push --set-upstream origin downtown
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 222 bytes | 111.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/francenemuo/Harlem.git
+ * [new branch]      downtown -> downtown
+Branch 'downtown' set up to track remote branch 'downtown' from 'origin'.
+PS C:\Users\Franc\Desktop\hollywood> git checkout -
+Switched to branch 'midtown'
+PS C:\Users\Franc\Desktop\hollywood> git push
+fatal: The current branch midtown has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin midtown
+
+PS C:\Users\Franc\Desktop\hollywood> git push --set-upstream origin midtown
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 258 bytes | 258.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'midtown' on GitHub by visiting:
+remote:      https://github.com/francenemuo/Harlem/pull/new/midtown
+remote:
+To https://github.com/francenemuo/Harlem.git
+ * [new branch]      midtown -> midtown
+Branch 'midtown' set up to track remote branch 'midtown' from 'origin'.
+PS C:\Users\Franc\Desktop\hollywood>         
